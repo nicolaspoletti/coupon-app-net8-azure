@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,9 +10,9 @@ namespace CouponAPI.Models
     {
         [Key]
         public int Id { get; set; }
-        [Requiered]
-        public string CouponCode { get; set; }
-        [Requiered]
+        [Required]
+        public string CouponCode { get; set; } = "";
+        [Required]
         public double DiscountAmount { get; set; }
         public int MinAmount { get; set; }
     }
